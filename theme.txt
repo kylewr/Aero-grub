@@ -1,0 +1,70 @@
+# GRUB2 Aero Theme - 1920x1200 High Res Edition
+# Global Settings
+title-text: ""
+desktop-image: "Aero.png"
+desktop-color: "#000000"
+
+# Use the large fonts we just generated
+title-font: "Sans Regular 26"
+message-font: "Sans Regular 20"
+terminal-font: "Sans Regular 20"
+
+# Colors
+title-color: "#000000"
+message-color: "#000000"
+message-bg-color: "#f6f6f6"
+
+# -----------------------------------------------------------------------
+# BOOT MENU (Centered)
+# Screen Width: 1920, Menu Width: 1000 -> Left = 460
+# Screen Height: 1200, Menu Height: 600 -> Top = 300
+# -----------------------------------------------------------------------
++ boot_menu {
+    left = 460
+    width = 1000
+    top = 300
+    height = 600
+
+    # Fonts & Colors
+    item_font = "Sans Regular 26"
+    selected_item_font = "Sans Regular 32"
+    item_color = "#000000"
+    selected_item_color = "#000000"
+
+    # Spacing (increased for high-res)
+    item_height = 50
+    item_padding = 10
+    item_spacing = 10
+    
+    # Icons (Standard size looks fine, but spacing increased)
+    icon_width = 32
+    icon_height = 32
+    item_icon_space = 25
+
+    # Images
+    selected_item_pixmap_style= "select_bkg_*.png"
+    menu_pixmap_style = "menu_bkg_*.png"
+    
+    # Scrollbar
+    scrollbar = true
+    scrollbar_width = 20
+    scrollbar_thumb = "sb_thumb_*.png"
+    scrollbar_frame = "sb_frame_*.png"
+}
+
+# -----------------------------------------------------------------------
+# PROGRESS BAR (Moved to bottom of menu)
+# -----------------------------------------------------------------------
++ progress_bar {
+    id = "__timeout__"
+    left = 460
+    width = 1000
+    top = 920
+    height = 24
+    show_text = true
+    font = "Sans Regular 20"
+    text_color = "255, 255, 255"
+    text = "@TIMEOUT@ seconds remaining..."
+    bar_style = "progress_bar_*.png"
+    highlight_style = "progress_highlight_*.png"
+}
